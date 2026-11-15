@@ -1,0 +1,255 @@
+{
+  "profile": {
+    "name": "Mingyu Bian",
+    "alternate_name": "卞明宇",
+    "affiliation": "Undergraduate in Intelligence Science and Technology, Xinjiang University",
+    "website": {
+      "label": "mybian.cn",
+      "url": "https://mybian.cn/"
+    },
+    "research_interests": "RNA language models, biomolecular structure and dynamics, and geometric and statistical modeling."
+  },
+  "sections": [
+    {
+      "title": "Education",
+      "kind": "entries",
+      "items": [
+        {
+          "title": "Xinjiang University",
+          "date": "2024-2028 (expected)",
+          "details": [
+            "Undergraduate in Intelligence Science and Technology, School of Future Technology.",
+            "Coursework: Advanced Mathematics, Linear Algebra, Probability and Statistics, Algorithms, Python, Machine Learning, Deep Learning, Natural Language Processing, Software Engineering, Microcontrollers and Interface Technology, and Image Signal Processing.",
+            "English: CET-4 453; English Test for International Communication (ETIC), CLA-Basic Pass."
+          ],
+          "url": "https://www.xju.edu.cn/"
+        },
+        {
+          "title": "Tsinghua Qian Xuesen Program & Shenzhen X-Institute",
+          "date": "2026-2028 (expected)",
+          "details": [
+            "Zero One Scholar in the joint training program. The research training curriculum comprises ESRT, ORIC, and SURF."
+          ],
+          "url": "https://www.x-institute.edu.cn/accompany"
+        },
+        {
+          "title": "Fudan University · Summer School in Mathematical Logic",
+          "date": "2025",
+          "details": [
+            "Foundations and applications of recursion theory with Liang Yu, including computable forcing, higher recursion theory, and algorithmic information theory."
+          ],
+          "url": "https://logic.fudan.edu.cn/event2025/summer"
+        }
+      ]
+    },
+    {
+      "title": "Research experience",
+      "kind": "entries",
+      "items": [
+        {
+          "title": "Shenzhen Bay Laboratory",
+          "date": "2026",
+          "details": [
+            "Visiting student in Prof. Yaoqi Zhou’s group at the Institute of Systems and Physical Biology. Studied RNA language models."
+          ],
+          "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
+        },
+        {
+          "title": "Institute of Software, Chinese Academy of Sciences",
+          "date": "2025-2026",
+          "details": [
+            "Undergraduate research training, individual project supervised by Junjie Wang. Designed MemoDroid’s three-tier memory for LLM-based GUI testing. Proposed a lightweight plug-in and evaluation on at least 200 applications across 15 categories."
+          ]
+        },
+        {
+          "title": "Institute of High Energy Physics, Chinese Academy of Sciences",
+          "date": "2025-2026",
+          "details": [
+            "Undergraduate research training, individual project supervised by Haiyun Teng. Studied GPU streaming for neutron spectrometers, including direct memory access, concurrent image processing, and experiment-specific image analysis. Project completed."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Research and engineering projects",
+      "kind": "entries",
+      "items": [
+        {
+          "title": "Plant counting and replanting decisions from drone imagery",
+          "date": "2025-2026",
+          "details": [
+            "Team lead, Undergraduate Innovation Training Program. Proposed a lightweight detector, aerial imaging, and GIS workflow to count plants and map missing seedlings for replanting."
+          ]
+        },
+        {
+          "title": "Open-source processor design · X-Fusion",
+          "date": "2025",
+          "details": [
+            "Team project. Recreated RISC-I and Cray-I architecture designs using open-source EDA tools and built a RISC-V vector arithmetic prototype. Received the X-Fusion Jingrui Award."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Outreach and service",
+      "kind": "entries",
+      "entry_spacing": 4,
+      "items": [
+        {
+          "title": "IBM SkillsBuild Rural Education Program",
+          "date": "2025",
+          "details": [
+            "Volunteer in a rural digital-skills education initiative. The team reached over 120 students."
+          ]
+        },
+        {
+          "title": "Movers4Climate Youth Green Action Initiative",
+          "date": "2025",
+          "details": [
+            "National UN Community Volunteer, team captain and project lead. Led climate literacy and sustainability classes that reached over 180 rural students."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Publications and manuscripts",
+      "kind": "publications",
+      "new_page": true,
+      "note": "† Equal contribution.",
+      "items": [
+        {
+          "title": "Discrete Backbone Elasticity and Curvature-Dependent Torsion Statistics in Proteins",
+          "status": "2026 · arXiv preprint · Second author",
+          "authors": [
+            "Yiquan Wang",
+            "Mingyu Bian",
+            "Jiayuan Ma"
+          ],
+          "url": "https://arxiv.org/abs/2611.06363"
+        },
+        {
+          "title": "QDF-NIPT: A Bi-Level Optimization Framework for Precision Prediction and Decision-Making in Prenatal Fetal Concentration Analysis",
+          "status": "ICIC 2026 · Online 2026, proceedings 2027 · Co-first author",
+          "authors": [
+            "Wenzhe Chen",
+            "Mingyu Bian",
+            "Xinyu Shu"
+          ],
+          "url": "https://doi.org/10.1007/978-981-92-3485-1_23"
+        },
+        {
+          "title": "An Integrated Computational Framework for Optimal Timing Decision in Multi-Source Monitoring Scenarios",
+          "status": "2026 · ABCM · Accepted · Co-first author",
+          "authors": [
+            "Wenzhe Chen",
+            "Mingyu Bian",
+            "Guanzhe Wang"
+          ]
+        },
+        {
+          "title": "CoDA-Pipe: An Integrated Computational Pipeline for Classification and Interpretation of Compositional Data",
+          "status": "2026 · CITSC · Accepted · Co-first author",
+          "authors": [
+            "Wenzhe Chen",
+            "Mingyu Bian",
+            "Guanzhe Wang"
+          ]
+        },
+        {
+          "title": "SVDKL: A dual-channel deep kernel framework unites structural-variation dosage and cis-regulatory topology for genomic prediction and network inference",
+          "status": "2026 · Agronomy Research · Under review · Co-first author",
+          "authors": [
+            "Mingyu Bian†",
+            "Yiquan Wang†",
+            "Shuming Dong",
+            "Liqiong Xie",
+            "Dongliang Guo",
+            "Kai Wei"
+          ]
+        },
+        {
+          "title": "TRIDENT: a three-stage cascade for orthogonal feature deconfounding and dynamic ligand discovery",
+          "status": "2026 · Agronomy Research · Under review · Co-first author",
+          "authors": [
+            "Mingyu Bian†",
+            "Yiquan Wang†",
+            "Kai Wei"
+          ]
+        },
+        {
+          "title": "Structured Bilevel Covariance Learning for Shared-Design Multi-Output Regression: Convergence, Complexity, and Empirical Analysis",
+          "status": "2026 · Under review · Co-first author"
+        },
+        {
+          "title": "Marginal Fidelity Is Not Enough: A Controlled Study of Synthetic-to-Real Failure in cfDNA Screening",
+          "status": "2026 · Under review · Co-first author"
+        }
+      ]
+    },
+    {
+      "title": "Competitions and honors",
+      "kind": "awards",
+      "items": [
+        {
+          "result": "Provincial First Prize",
+          "title": "17th Lanqiao Cup National College Student Software and IT Competition",
+          "date": "2026",
+          "role": "Python Algorithm Design Track · Individual entrant · Qualified for the national finals"
+        },
+        {
+          "result": "National Second Prize",
+          "title": "7th Global Campus Artificial Intelligence Algorithm Elite Competition",
+          "date": "2025",
+          "role": "AI + Integrated Circuits Track · Primary team lead",
+          "url": "https://wljs.xju.edu.cn/info/1047/1634.htm"
+        },
+        {
+          "result": "National First Prize",
+          "title": "13th National Collegiate Business Elite Challenge, Retail Operations Simulation",
+          "date": "2025",
+          "role": "Primary team lead"
+        },
+        {
+          "result": "Provincial Gold Award",
+          "title": "China International College Students’ Innovation Competition",
+          "date": "2025",
+          "role": "Core team member (primary lead unspecified)"
+        },
+        {
+          "result": "Provincial First Prize",
+          "title": "Contemporary Undergraduate Mathematical Contest in Modeling",
+          "date": "2025",
+          "role": "Team captain (primary lead unspecified)"
+        },
+        {
+          "result": "Jingrui Award",
+          "title": "X-Fusion Global Innovators’ Conference",
+          "date": "2025",
+          "role": "Open-source computer team project (primary lead unspecified)"
+        },
+        {
+          "result": "National First Prize",
+          "title": "National Collegiate Mathematics Olympiad",
+          "date": "2025",
+          "role": "Non-Mathematics Division · Individual entrant"
+        },
+        {
+          "result": "Successful Participant",
+          "title": "Mathematical Contest in Modeling (MCM)",
+          "date": "2025",
+          "role": "Team captain (primary lead unspecified)"
+        },
+        {
+          "result": "National Second Prize",
+          "title": "7th Huajiao Cup National College Student Mathematics Competition",
+          "date": "2024",
+          "role": "Non-Mathematics Division · Individual entrant"
+        }
+      ]
+    }
+  ],
+  "closing_note": {
+    "label": "Campus activities",
+    "text": "Captain of the university table tennis and debate teams. Recognized as a debater at the provincial level."
+  }
+}

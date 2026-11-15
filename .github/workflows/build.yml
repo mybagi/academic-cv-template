@@ -1,0 +1,33 @@
+name: Build academic CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pdf:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Build two-page PDF
+        run: python generate_cv.py --expected-pages 2
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: academic-cv
+          path: build/academic-cv.pdf
+          if-no-files-found: error
