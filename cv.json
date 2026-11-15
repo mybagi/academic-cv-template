@@ -13,7 +13,7 @@
     {
       "title": "Education",
       "kind": "entries",
-      "entry_spacing": 3,
+      "entry_spacing": 2,
       "items": [
         {
           "title": "Xinjiang University",
@@ -102,8 +102,32 @@
     {
       "title": "Outreach and service",
       "kind": "entries",
-      "entry_spacing": 4,
+      "entry_spacing": 2,
       "items": [
+        {
+          "title": "2nd Change Maker Youth Initiative for Agricultural Heritage",
+          "date": "2026",
+          "details": [
+            "Team captain and project lead. Led fieldwork on wheat farming and processing in Shuanghe, Xinjiang."
+          ],
+          "url": "https://mp.weixin.qq.com/s/8WLNlBptw8gXcix8gY9xEw"
+        },
+        {
+          "title": "3rd Movers4Climate Youth Green Action Initiative",
+          "date": "2026",
+          "details": [
+            "Team captain and project lead. Led five climate and sustainability lessons that reached 151 students."
+          ],
+          "url": "https://mp.weixin.qq.com/s/HyoNtY_BdCeypwDFWIyGZA"
+        },
+        {
+          "title": "Youth4Rural Digital Rural Development Initiative",
+          "date": "2026",
+          "details": [
+            "Team captain and project lead. Led a 14-day teaching program. One group reached 32 students."
+          ],
+          "url": "https://mp.weixin.qq.com/s/J0qlshThxEmInMyb90Xrjg"
+        },
         {
           "title": "IBM SkillsBuild Rural Education Program",
           "date": "2025",
@@ -218,6 +242,18 @@
           "role": "Python Algorithm Design Track · Individual entrant · Qualified for the national finals"
         },
         {
+          "result": "Provincial Gold Award",
+          "title": "China International College Students’ Innovation Competition",
+          "date": "2025 · 2026",
+          "role": "Team member"
+        },
+        {
+          "result": "Provincial First Prize",
+          "title": "Contemporary Undergraduate Mathematical Contest in Modeling",
+          "date": "2025 · 2026",
+          "role": "Primary team lead"
+        },
+        {
           "result": "National Second Prize",
           "title": "7th Global Campus Artificial Intelligence Algorithm Elite Competition",
           "date": "2025",
@@ -227,18 +263,6 @@
         {
           "result": "National First Prize",
           "title": "13th National Collegiate Business Elite Challenge, Retail Operations Simulation",
-          "date": "2025",
-          "role": "Primary team lead"
-        },
-        {
-          "result": "Provincial Gold Award",
-          "title": "China International College Students’ Innovation Competition",
-          "date": "2025",
-          "role": "Core team member (primary lead unspecified)"
-        },
-        {
-          "result": "Provincial First Prize",
-          "title": "Contemporary Undergraduate Mathematical Contest in Modeling",
           "date": "2025",
           "role": "Primary team lead"
         },
