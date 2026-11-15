@@ -58,14 +58,14 @@
           "title": "Institute of Software, Chinese Academy of Sciences",
           "date": "2025-2026",
           "details": [
-            "Undergraduate research training, individual project supervised by Junjie Wang. Designed MemoDroid’s three-tier memory for LLM-based GUI testing. Proposed a lightweight plug-in and evaluation on at least 200 applications across 15 categories."
+            "Individual undergraduate project supervised by Junjie Wang. Built MemoDroid, a lightweight plug-in with three-tier memory for LLM-based GUI testing, and evaluated it on at least 200 real applications across 15 categories."
           ]
         },
         {
           "title": "Institute of High Energy Physics, Chinese Academy of Sciences",
           "date": "2025-2026",
           "details": [
-            "Undergraduate research training, individual project supervised by Haiyun Teng. Studied GPU streaming for neutron spectrometers, including direct memory access, concurrent image processing, and experiment-specific image analysis. Project completed."
+            "Individual undergraduate research project supervised by Haiyun Teng. Built a GPU streaming prototype and software framework for data acquisition, experiment-specific image analysis, output debugging, and monitoring on neutron spectrometers. The framework uses direct memory access and concurrent GPU image processing."
           ]
         }
       ]
