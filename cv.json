@@ -56,14 +56,6 @@
       "kind": "entries",
       "items": [
         {
-          "title": "Shenzhen Bay Laboratory",
-          "date": "2026",
-          "details": [
-            "Visiting student in Prof. Yaoqi Zhou’s group, Institute of Systems and Physical Biology. Applied contrastive learning to RESM for downstream tasks and worked on extending it to multimodal inputs."
-          ],
-          "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
-        },
-        {
           "title": "Institute of Software, Chinese Academy of Sciences",
           "date": "2025-2026",
           "details": [
@@ -76,6 +68,14 @@
           "details": [
             "Individual undergraduate research project supervised by Haiyun Teng. Built a GPU streaming prototype and software framework for data acquisition, experiment-specific image analysis, output debugging, and monitoring on neutron spectrometers. The framework uses direct memory access and concurrent GPU image processing."
           ]
+        },
+        {
+          "title": "Shenzhen Bay Laboratory",
+          "date": "2026–Present",
+          "details": [
+            "Visiting student in Prof. Yaoqi Zhou’s group, Institute of Systems and Physical Biology. Applied contrastive learning to RESM for downstream tasks and worked on extending it to multimodal inputs."
+          ],
+          "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
         }
       ]
     },
@@ -148,7 +148,7 @@
         },
         {
           "title": "An Integrated Computational Framework for Optimal Timing Decision in Multi-Source Monitoring Scenarios",
-          "status": "2026 · ABCM · Accepted · Not listed by CCF · Co-first author",
+          "status": "2026 · ABCM · Accepted · EI conference · Co-first author",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -157,7 +157,7 @@
         },
         {
           "title": "CoDA-Pipe: An Integrated Computational Pipeline for Classification and Interpretation of Compositional Data",
-          "status": "2026 · CITSC · Accepted · Not listed by CCF · Co-first author",
+          "status": "2026 · CITSC · Accepted · EI conference · Co-first author",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -187,11 +187,11 @@
         },
         {
           "title": "Structured Bilevel Covariance Learning for Shared-Design Multi-Output Regression: Convergence, Complexity, and Empirical Analysis",
-          "status": "2026 · Under review · Target venue: CCF A · Co-first author"
+          "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author"
         },
         {
           "title": "Marginal Fidelity Is Not Enough: A Controlled Study of Synthetic-to-Real Failure in cfDNA Screening",
-          "status": "2026 · Under review · Target venue: CCF A · Co-first author"
+          "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author"
         }
       ]
     },
