@@ -13,6 +13,7 @@
     {
       "title": "Education",
       "kind": "entries",
+      "entry_spacing": 3,
       "items": [
         {
           "title": "Xinjiang University",
@@ -33,6 +34,14 @@
           "url": "https://www.x-institute.edu.cn/accompany"
         },
         {
+          "title": "AI for Drug Discovery Symposium: From Target to Deal",
+          "date": "2026",
+          "details": [
+            "Attendee · Guangming, Shenzhen."
+          ],
+          "url": "https://mp.weixin.qq.com/s/8ByNQKUITxVejy5jDeEXwA"
+        },
+        {
           "title": "Fudan University · Summer School in Mathematical Logic",
           "date": "2025",
           "details": [
@@ -50,7 +59,7 @@
           "title": "Shenzhen Bay Laboratory",
           "date": "2026",
           "details": [
-            "Visiting student in Prof. Yaoqi Zhou’s group at the Institute of Systems and Physical Biology. Studied RNA language models."
+            "Visiting student in Prof. Yaoqi Zhou’s group, Institute of Systems and Physical Biology. Applied contrastive learning to RESM for downstream tasks and worked on extending it to multimodal inputs."
           ],
           "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
         },
