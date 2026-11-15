@@ -119,7 +119,7 @@
       "items": [
         {
           "title": "Discrete Backbone Elasticity and Curvature-Dependent Torsion Statistics in Proteins",
-          "status": "2026 · arXiv preprint · Second author",
+          "status": "2026 · arXiv · Preprint · Second author",
           "authors": [
             "Yiquan Wang",
             "Mingyu Bian",
@@ -129,7 +129,7 @@
         },
         {
           "title": "QDF-NIPT: A Bi-Level Optimization Framework for Precision Prediction and Decision-Making in Prenatal Fetal Concentration Analysis",
-          "status": "ICIC 2026 · Online 2026, proceedings 2027 · Co-first author",
+          "status": "ICIC 2026 · CCF C · Online 2026, proceedings 2027 · Co-first author",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -139,7 +139,7 @@
         },
         {
           "title": "An Integrated Computational Framework for Optimal Timing Decision in Multi-Source Monitoring Scenarios",
-          "status": "2026 · ABCM · Accepted · Co-first author",
+          "status": "2026 · ABCM · Accepted · Not listed by CCF · Co-first author",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -148,7 +148,7 @@
         },
         {
           "title": "CoDA-Pipe: An Integrated Computational Pipeline for Classification and Interpretation of Compositional Data",
-          "status": "2026 · CITSC · Accepted · Co-first author",
+          "status": "2026 · CITSC · Accepted · Not listed by CCF · Co-first author",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -157,7 +157,7 @@
         },
         {
           "title": "SVDKL: A dual-channel deep kernel framework unites structural-variation dosage and cis-regulatory topology for genomic prediction and network inference",
-          "status": "2026 · Agronomy Research · Under review · Co-first author",
+          "status": "2026 · Horticulture Research (target) · JCR Q1 (2025) · Under review · Co-first author",
           "authors": [
             "Mingyu Bian†",
             "Yiquan Wang†",
@@ -169,7 +169,7 @@
         },
         {
           "title": "TRIDENT: a three-stage cascade for orthogonal feature deconfounding and dynamic ligand discovery",
-          "status": "2026 · Agronomy Research · Under review · Co-first author",
+          "status": "2026 · Horticulture Research (target) · JCR Q1 (2025) · Under review · Co-first author",
           "authors": [
             "Mingyu Bian†",
             "Yiquan Wang†",
@@ -178,11 +178,11 @@
         },
         {
           "title": "Structured Bilevel Covariance Learning for Shared-Design Multi-Output Regression: Convergence, Complexity, and Empirical Analysis",
-          "status": "2026 · Under review · Co-first author"
+          "status": "2026 · Under review · Target venue: CCF A · Co-first author"
         },
         {
           "title": "Marginal Fidelity Is Not Enough: A Controlled Study of Synthetic-to-Real Failure in cfDNA Screening",
-          "status": "2026 · Under review · Co-first author"
+          "status": "2026 · Under review · Target venue: CCF A · Co-first author"
         }
       ]
     },
