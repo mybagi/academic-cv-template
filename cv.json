@@ -150,7 +150,7 @@
       "title": "Publications and manuscripts",
       "kind": "publications",
       "new_page": true,
-      "entry_spacing": 2.5,
+      "entry_spacing": 1,
       "note": "† Equal contribution.",
       "items": [
         {
@@ -225,7 +225,7 @@
     {
       "title": "Competitions and honors",
       "kind": "awards",
-      "entry_spacing": 1,
+      "entry_spacing": 0,
       "items": [
         {
           "result": "Provincial First Prize",
@@ -244,6 +244,13 @@
           "title": "17th Lanqiao Cup National College Student Software and IT Competition",
           "date": "2026",
           "role": "Python Algorithm Design Track · Individual entrant"
+        },
+        {
+          "result": "Provincial Third Prize",
+          "title": "19th Chinese Collegiate Computing Competition (4C)",
+          "date": "2026",
+          "role": "Xinjiang Regional Round (Undergraduate Division) · Core Team Member · Jiangheng Guzhu",
+          "url": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"
         },
         {
           "result": "Provincial Gold Award",
