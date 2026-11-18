@@ -150,6 +150,7 @@
       "title": "Publications and manuscripts",
       "kind": "publications",
       "new_page": true,
+      "entry_spacing": 2.5,
       "note": "† Equal contribution.",
       "items": [
         {
@@ -224,6 +225,7 @@
     {
       "title": "Competitions and honors",
       "kind": "awards",
+      "entry_spacing": 1,
       "items": [
         {
           "result": "Provincial First Prize",
@@ -298,5 +300,18 @@
   "closing_note": {
     "label": "Campus activities",
     "text": "Captain of the university table tennis and debate teams. Recognized as a debater at the provincial level."
-  }
+  },
+  "wechat_accounts": [
+    {
+      "title": "BioticAI",
+      "description": "AI and biology",
+      "qr_image": "assets/bioticai-qr.jpg"
+    },
+    {
+      "title": "浮云半卷",
+      "language": "zh",
+      "description": "Poetry",
+      "qr_image": "assets/poetry-qr.jpg"
+    }
+  ]
 }

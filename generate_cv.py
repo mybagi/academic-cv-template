@@ -14,6 +14,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     Flowable,
+    Image,
     KeepTogether,
     PageBreak,
     Paragraph,
@@ -71,13 +72,14 @@ def linked_label(label, url=None):
     return escape(label)
 
 
-def heading(label, before, after):
+def heading(label, before, after, content=()):
     return KeepTogether([
         Spacer(1, before),
         paragraph(escape(label), "section"),
         Spacer(1, 4),
         Divider(),
         Spacer(1, after),
+        *content,
     ])
 
 
@@ -96,7 +98,7 @@ def dated_entry(item, space):
     return KeepTogether([pair, paragraph(detail, "detail"), Spacer(1, space)])
 
 
-def publication(item, display_name):
+def publication(item, display_name, space):
     title = linked_label(item["title"], item.get("url"))
     authors = []
     for author in item.get("authors", []):
@@ -110,21 +112,46 @@ def publication(item, display_name):
     return KeepTogether([
         paragraph(title, "paper_title"),
         paragraph(metadata, "paper_metadata"),
-        Spacer(1, 6.7),
+        Spacer(1, space),
     ])
 
 
-def award(item):
+def award(item, space):
     event = linked_label(item["title"], item.get("url"))
     result, role, date = (escape(item[key]) for key in ("result", "role", "date"))
     date = date.replace(" · ", " <b>·</b> ")
     return KeepTogether([
         paragraph(f"<b>{result}</b> · {event}<br/>{role} · {date}", "award"),
-        Spacer(1, 3.7),
+        Spacer(1, space),
     ])
 
 
-def build_story(data):
+def wechat_account_row(items, assets_dir):
+    qr_size = 60
+    qr_column_width = qr_size + 7
+    label_width = CONTENT_WIDTH / len(items) - qr_column_width
+    cells = []
+    for item in items:
+        title = escape(item["title"])
+        if item.get("language") == "zh":
+            title = f'<font name="CVChinese">{title}</font>'
+        qr_image = Image(str(assets_dir / item["qr_image"]), width=qr_size, height=qr_size)
+        label = [paragraph(title, "entry"), paragraph(escape(item["description"]), "detail")]
+        cells.extend([qr_image, label])
+    return Table(
+        [cells],
+        colWidths=[qr_column_width, label_width] * len(items),
+        style=TableStyle([
+            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+        ]),
+    )
+
+
+def build_story(data, assets_dir=ROOT):
     profile = data["profile"]
     name_markup = escape(profile["name"])
     if alternate_name := profile.get("alternate_name"):
@@ -152,9 +179,11 @@ def build_story(data):
             space = section.get("entry_spacing", 2)
             story.extend(dated_entry(item, space) for item in section["items"])
         elif kind == "publications":
-            story.extend(publication(item, profile["name"]) for item in section["items"])
+            space = section.get("entry_spacing", 6.7)
+            story.extend(publication(item, profile["name"], space) for item in section["items"])
         elif kind == "awards":
-            story.extend(award(item) for item in section["items"])
+            space = section.get("entry_spacing", 3.7)
+            story.extend(award(item, space) for item in section["items"])
         else:
             raise ValueError(f"Unknown section kind: {kind}")
         if note := section.get("note"):
@@ -162,10 +191,12 @@ def build_story(data):
     if footer := data.get("closing_note"):
         story.append(Spacer(1, 6))
         story.append(paragraph(f'<b>{escape(footer["label"])}</b> · {escape(footer["text"])}', "detail"))
+    if accounts := data.get("wechat_accounts"):
+        story.append(heading("WeChat official accounts", 5, 4, [wechat_account_row(accounts, assets_dir)]))
     return story
 
 
-def build_pdf(data, output, expected_pages):
+def build_pdf(data, output, expected_pages, assets_dir=ROOT):
     fonts = ensure_fonts(ROOT / "build" / "fonts")
     for name, filename in (
         ("CV", "Carlito-Regular.ttf"),
@@ -208,7 +239,7 @@ def build_pdf(data, output, expected_pages):
             subject="Academic curriculum vitae",
             invariant=1,
         )
-        doc.build(build_story(data), onFirstPage=draw_page, onLaterPages=draw_page)
+        doc.build(build_story(data, assets_dir), onFirstPage=draw_page, onLaterPages=draw_page)
         if expected_pages is not None and doc.page != expected_pages:
             raise ValueError(f"Expected {expected_pages} pages, generated {doc.page}.")
         staged_pdf.replace(output)
@@ -222,7 +253,7 @@ def main():
     parser.add_argument("--expected-pages", type=int, help="fail if the PDF has a different page count")
     args = parser.parse_args()
     data = json.loads(args.data.read_text(encoding="utf-8"))
-    page_count = build_pdf(data, args.output, args.expected_pages)
+    page_count = build_pdf(data, args.output, args.expected_pages, args.data.resolve().parent)
     print(f"Built {args.output} ({page_count} pages)")
 
 

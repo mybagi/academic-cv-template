@@ -26,7 +26,9 @@ Open `build/academic-cv.pdf`. The first build downloads and verifies the fonts a
 
 ## Edit the content
 
-Update [cv.json](cv.json) and rerun the build command. The `sections` and each section’s `items` render in file order. Use the `entries` layout for dated entries, `publications` for research outputs, and `awards` for honors and competition roles. An entry can include a URL and one or more detail lines. Set `new_page` to start a section on the next page. The optional `alternate_name` adds a second name alongside the primary name.
+Update [cv.json](cv.json) and rerun the build command. The `sections` and each section’s `items` render in file order. Use the `entries` layout for dated entries, `publications` for research outputs, and `awards` for honors and competition roles. An entry can include a URL and one or more detail lines. Set `new_page` to start a section on the next page or `entry_spacing` to adjust the space after each item in points. The optional `alternate_name` adds a second name alongside the primary name.
+
+The optional `wechat_accounts` list adds official account names, descriptions, and QR codes at the end. Set `qr_image` relative to the JSON file and specify `"language": "zh"` for a Chinese account name.
 
 To use different content or an output path, run `python generate_cv.py --data path/to/cv.json --output path/to/cv.pdf` with the virtual environment’s Python. Use `--expected-pages` when you want the build to reject a layout that exceeds or falls short of a chosen page count.
 
