@@ -54,7 +54,7 @@ def read_upstream(files, temporary):
         return {filename: (checkout / "ofl" / filename).read_bytes() for filename in files}
 
 
-def ensure_fonts(cache):
+def ensure_fonts(cache, *, chinese_bold=False):
     cache.mkdir(parents=True, exist_ok=True)
     sources = {filename: cache / Path(filename).name for filename in FONTS}
     missing = [
@@ -73,11 +73,15 @@ def ensure_fonts(cache):
                 staged.replace(sources[filename])
 
         variable_font = sources["notosanssc/NotoSansSC[wght].ttf"]
-        regular_font = cache / "NotoSansSC-Regular.ttf"
-        if missing or not regular_font.is_file():
-            staged = temporary / regular_font.name
-            with TTFont(variable_font, recalcTimestamp=False) as font:
-                instantiateVariableFont(font, {"wght": 400}, inplace=True, updateFontNames=True)
-                font.save(staged)
-            staged.replace(regular_font)
+        weights = [(400, "Regular")]
+        if chinese_bold:
+            weights.append((700, "Bold"))
+        for weight, label in weights:
+            instance = cache / f"NotoSansSC-{label}.ttf"
+            if missing or not instance.is_file():
+                staged = temporary / instance.name
+                with TTFont(variable_font, recalcTimestamp=False) as font:
+                    instantiateVariableFont(font, {"wght": weight}, inplace=True, updateFontNames=True)
+                    font.save(staged)
+                staged.replace(instance)
     return cache

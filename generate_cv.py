@@ -48,6 +48,42 @@ STYLES = {
     "paper_metadata": ParagraphStyle("paper_metadata", fontName="CV", fontSize=9.8, leading=12.2, textColor=MUTED),
     "award": ParagraphStyle("award", fontName="CV", fontSize=9.65, leading=12.2, textColor=TEXT),
 }
+CHINESE_STYLES = {
+    name: ParagraphStyle(
+        name + "-zh",
+        parent=style,
+        fontName="CVChineseBold" if style.fontName == "CVBold" else "CVChinese",
+        wordWrap=None if name == "paper_title" else "CJK",
+    )
+    for name, style in STYLES.items()
+}
+LABELS = {
+    "en": {
+        "title": "Academic CV",
+        "subject": "Academic curriculum vitae",
+        "research": "Research interests",
+        "wechat": "WeChat official accounts",
+    },
+    "zh": {
+        "title": "学术简历",
+        "subject": "学术简历",
+        "research": "研究方向",
+        "wechat": "微信公众号",
+    },
+}
+
+
+def chinese_content(value):
+    """Use optional _zh overrides while sharing authors, links, and assets."""
+    if isinstance(value, list):
+        return [chinese_content(item) for item in value]
+    if isinstance(value, dict):
+        return {
+            key: chinese_content(value.get(key + "_zh", item))
+            for key, item in value.items()
+            if not key.endswith("_zh")
+        }
+    return value
 
 
 class Divider(Flowable):
@@ -62,8 +98,8 @@ class Divider(Flowable):
         self.canv.line(0, 0, self.width, 0)
 
 
-def paragraph(markup, style):
-    return Paragraph(markup, STYLES[style])
+def paragraph(markup, style, styles):
+    return Paragraph(markup, styles[style])
 
 
 def linked_label(label, url=None):
@@ -72,10 +108,10 @@ def linked_label(label, url=None):
     return escape(label)
 
 
-def heading(label, before, after, content=()):
+def heading(label, before, after, styles, content=()):
     return KeepTogether([
         Spacer(1, before),
-        paragraph(escape(label), "section"),
+        paragraph(escape(label), "section", styles),
         Spacer(1, 4),
         Divider(),
         Spacer(1, after),
@@ -83,9 +119,9 @@ def heading(label, before, after, content=()):
     ])
 
 
-def dated_entry(item, space):
-    title = paragraph(linked_label(item["title"], item.get("url")), "entry")
-    date = paragraph(escape(item["date"]), "date")
+def dated_entry(item, space, styles):
+    title = paragraph(linked_label(item["title"], item.get("url")), "entry", styles)
+    date = paragraph(escape(item["date"]), "date", styles)
     pair = Table([[title, date]], colWidths=[CONTENT_WIDTH - 134, 134])
     pair.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -95,38 +131,44 @@ def dated_entry(item, space):
         ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
     detail = "<br/>".join(escape(line) for line in item["details"])
-    return KeepTogether([pair, paragraph(detail, "detail"), Spacer(1, space)])
+    return KeepTogether([pair, paragraph(detail, "detail", styles), Spacer(1, space)])
 
 
-def publication(item, display_name, space):
+def publication(item, display_names, space, styles):
     title = linked_label(item["title"], item.get("url"))
+    title_styles = STYLES if item["title"].isascii() else styles
     authors = []
-    for author in item.get("authors", []):
+    names = item.get("authors", [])
+    for author in names:
         author_markup = escape(author)
-        if author.rstrip("†").strip() == display_name:
-            author_markup = f"<b>{escape(display_name)}</b>{escape(author[len(display_name):])}"
+        name = author.rstrip("†").strip()
+        if name in display_names:
+            author_markup = f"<b>{escape(name)}</b>{escape(author[len(name):])}"
         authors.append(author_markup)
     metadata = escape(item["status"])
     if authors:
-        metadata = f"{', '.join(authors)} · {metadata}"
+        byline = ", ".join(authors)
+        if styles is CHINESE_STYLES and all(name.rstrip("†").isascii() for name in names):
+            byline = f'<font name="CV">{byline}</font>'
+        metadata = f"{byline} · {metadata}"
     return KeepTogether([
-        paragraph(title, "paper_title"),
-        paragraph(metadata, "paper_metadata"),
+        paragraph(title, "paper_title", title_styles),
+        paragraph(metadata, "paper_metadata", styles),
         Spacer(1, space),
     ])
 
 
-def award(item, space):
+def award(item, space, styles):
     event = linked_label(item["title"], item.get("url"))
     result, role, date = (escape(item[key]) for key in ("result", "role", "date"))
     date = date.replace(" · ", " <b>·</b> ")
     return KeepTogether([
-        paragraph(f"<b>{result}</b> · {event}<br/>{role} · {date}", "award"),
+        paragraph(f"<b>{result}</b> · {event}<br/>{role} · {date}", "award", styles),
         Spacer(1, space),
     ])
 
 
-def wechat_account_row(items, assets_dir):
+def wechat_account_row(items, assets_dir, styles):
     qr_size = 60
     qr_column_width = qr_size + 7
     label_width = CONTENT_WIDTH / len(items) - qr_column_width
@@ -136,7 +178,10 @@ def wechat_account_row(items, assets_dir):
         if item.get("language") == "zh":
             title = f'<font name="CVChinese">{title}</font>'
         qr_image = Image(str(assets_dir / item["qr_image"]), width=qr_size, height=qr_size)
-        label = [paragraph(title, "entry"), paragraph(escape(item["description"]), "detail")]
+        label = [
+            paragraph(title, "entry", styles),
+            paragraph(escape(item["description"]), "detail", styles),
+        ]
         cells.extend([qr_image, label])
     return Table(
         [cells],
@@ -151,19 +196,29 @@ def wechat_account_row(items, assets_dir):
     )
 
 
-def build_story(data, assets_dir=ROOT):
+def build_story(data, assets_dir=ROOT, *, language="en"):
+    styles = STYLES if language == "en" else CHINESE_STYLES
+    labels = LABELS[language]
     profile = data["profile"]
     name_markup = escape(profile["name"])
+    display_names = {profile["name"]}
     if alternate_name := profile.get("alternate_name"):
-        name_markup += f' <font name="CVChinese" size="20" color="{GREEN}">{escape(alternate_name)}</font>'
+        display_names.add(alternate_name)
+        alternate_font = "CVChinese" if language == "en" else "CV"
+        name_markup += (
+            f' <font name="{alternate_font}" size="20" color="{GREEN}">'
+            f'{escape(alternate_name)}</font>'
+        )
     affiliation = escape(profile["affiliation"])
     if website := profile.get("website"):
         affiliation += " · " + linked_label(website["label"], website["url"])
     story = [
-        paragraph(name_markup, "name"),
+        paragraph(name_markup, "name", styles),
         Spacer(1, 4),
-        paragraph(affiliation, "intro"),
-        paragraph(f'<b>Research interests</b> · {escape(profile["research_interests"])}', "intro"),
+        paragraph(affiliation, "intro", styles),
+        paragraph(
+            f'<b>{labels["research"]}</b> · {escape(profile["research_interests"])}', "intro", styles
+        ),
     ]
     for section in data["sections"]:
         starts_page = section.get("new_page", False)
@@ -174,53 +229,66 @@ def build_story(data, assets_dir=ROOT):
         after = 4
         if kind == "awards":
             before, after = 8, 5
-        story.append(heading(section["title"], before, after))
+        story.append(heading(section["title"], before, after, styles))
         if kind == "entries":
             space = section.get("entry_spacing", 2)
-            story.extend(dated_entry(item, space) for item in section["items"])
+            story.extend(dated_entry(item, space, styles) for item in section["items"])
         elif kind == "publications":
             space = section.get("entry_spacing", 6.7)
-            story.extend(publication(item, profile["name"], space) for item in section["items"])
+            story.extend(publication(item, display_names, space, styles) for item in section["items"])
         elif kind == "awards":
             space = section.get("entry_spacing", 3.7)
-            story.extend(award(item, space) for item in section["items"])
+            story.extend(award(item, space, styles) for item in section["items"])
         else:
             raise ValueError(f"Unknown section kind: {kind}")
         if note := section.get("note"):
-            story.append(paragraph(escape(note), "paper_metadata"))
+            story.append(paragraph(escape(note), "paper_metadata", styles))
     if footer := data.get("closing_note"):
         story.append(Spacer(1, 6))
-        story.append(paragraph(f'<b>{escape(footer["label"])}</b> · {escape(footer["text"])}', "detail"))
+        story.append(paragraph(
+            f'<b>{escape(footer["label"])}</b> · {escape(footer["text"])}', "detail", styles
+        ))
     if accounts := data.get("wechat_accounts"):
-        story.append(heading("WeChat official accounts", 5, 4, [wechat_account_row(accounts, assets_dir)]))
+        account_row = wechat_account_row(accounts, assets_dir, styles)
+        story.append(heading(labels["wechat"], 5, 4, styles, [account_row]))
     return story
 
 
-def build_pdf(data, output, expected_pages, assets_dir=ROOT):
-    fonts = ensure_fonts(ROOT / "build" / "fonts")
-    for name, filename in (
+def build_pdf(data, output, expected_pages, assets_dir=ROOT, *, language="en"):
+    chinese = language == "zh"
+    fonts = ensure_fonts(ROOT / "build" / "fonts", chinese_bold=chinese)
+    faces = [
         ("CV", "Carlito-Regular.ttf"),
         ("CVBold", "Carlito-Bold.ttf"),
         ("CVChinese", "NotoSansSC-Regular.ttf"),
-    ):
+    ]
+    if chinese:
+        faces.append(("CVChineseBold", "NotoSansSC-Bold.ttf"))
+        data = chinese_content(data)
+    for name, filename in faces:
         pdfmetrics.registerFont(TTFont(name, str(fonts / filename)))
     pdfmetrics.registerFontFamily("CV", normal="CV", bold="CVBold")
+    if chinese:
+        pdfmetrics.registerFontFamily("CVChinese", normal="CVChinese", bold="CVChineseBold")
 
     name = data["profile"]["name"]
+    labels = LABELS[language]
+    regular_font = "CVChinese" if chinese else "CV"
+    bold_font = "CVChineseBold" if chinese else "CVBold"
 
     def draw_page(canvas, doc):
         canvas.saveState()
         canvas.setFillColor(colors.HexColor(GREEN))
         canvas.rect(MARGIN, PAGE_HEIGHT - 40, 28, 2.1, fill=1, stroke=0)
         if doc.page > 1:
-            canvas.setFont("CVBold", 10)
+            canvas.setFont(bold_font, 10)
             canvas.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 41, name)
         canvas.setStrokeColor(colors.HexColor(RULE))
         canvas.setLineWidth(0.6)
         canvas.line(MARGIN, 34, PAGE_WIDTH - MARGIN, 34)
-        canvas.setFont("CV", 9)
+        canvas.setFont(regular_font, 9)
         canvas.setFillColor(colors.HexColor(MUTED))
-        canvas.drawString(MARGIN, 21, f"{name} · Academic CV")
+        canvas.drawString(MARGIN, 21, f'{name} · {labels["title"]}')
         canvas.drawRightString(PAGE_WIDTH - MARGIN, 21, str(doc.page))
         canvas.restoreState()
 
@@ -234,12 +302,16 @@ def build_pdf(data, output, expected_pages, assets_dir=ROOT):
             rightMargin=MARGIN - 6,
             topMargin=46,
             bottomMargin=40,
-            title=f"{name} | Academic CV",
+            title=f'{name} | {labels["title"]}',
             author=name,
-            subject="Academic curriculum vitae",
+            subject=labels["subject"],
             invariant=1,
         )
-        doc.build(build_story(data, assets_dir), onFirstPage=draw_page, onLaterPages=draw_page)
+        doc.build(
+            build_story(data, assets_dir, language=language),
+            onFirstPage=draw_page,
+            onLaterPages=draw_page,
+        )
         if expected_pages is not None and doc.page != expected_pages:
             raise ValueError(f"Expected {expected_pages} pages, generated {doc.page}.")
         staged_pdf.replace(output)
@@ -249,12 +321,17 @@ def build_pdf(data, output, expected_pages, assets_dir=ROOT):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, default=ROOT / "cv.json", help="JSON content file")
-    parser.add_argument("--output", type=Path, default=ROOT / "build" / "academic-cv.pdf", help="PDF output path")
+    parser.add_argument("--language", choices=("en", "zh"), default="en", help="PDF language")
+    parser.add_argument("--output", type=Path, help="PDF output path")
     parser.add_argument("--expected-pages", type=int, help="fail if the PDF has a different page count")
     args = parser.parse_args()
     data = json.loads(args.data.read_text(encoding="utf-8"))
-    page_count = build_pdf(data, args.output, args.expected_pages, args.data.resolve().parent)
-    print(f"Built {args.output} ({page_count} pages)")
+    default_name = "academic-cv-zh.pdf" if args.language == "zh" else "academic-cv.pdf"
+    output = args.output or ROOT / "build" / default_name
+    page_count = build_pdf(
+        data, output, args.expected_pages, args.data.resolve().parent, language=args.language
+    )
+    print(f"Built {output} ({page_count} pages)")
 
 
 if __name__ == "__main__":

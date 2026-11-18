@@ -23,11 +23,15 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-      - name: Build two-page PDF
-        run: python generate_cv.py --expected-pages 2
-      - name: Upload PDF
+      - name: Build English and Chinese PDFs
+        run: |
+          python generate_cv.py --language en --expected-pages 2 --output build/mingyu-bian-cv-en.pdf
+          python generate_cv.py --language zh --expected-pages 2 --output build/mingyu-bian-cv-zh.pdf
+      - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
           name: academic-cv
-          path: build/academic-cv.pdf
+          path: |
+            build/mingyu-bian-cv-en.pdf
+            build/mingyu-bian-cv-zh.pdf
           if-no-files-found: error

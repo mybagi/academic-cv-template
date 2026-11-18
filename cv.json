@@ -1,51 +1,78 @@
 {
   "profile": {
     "name": "Mingyu Bian",
+    "name_zh": "卞明宇",
     "alternate_name": "卞明宇",
+    "alternate_name_zh": "Mingyu Bian",
     "affiliation": "Undergraduate in Intelligence Science and Technology, Xinjiang University",
+    "affiliation_zh": "新疆大学未来技术学院智能科学与技术专业本科生",
     "website": {
       "label": "mybian.cn",
       "url": "https://mybian.cn/"
     },
-    "research_interests": "RNA language models, biomolecular structure and dynamics, and geometric and statistical modeling."
+    "research_interests": "AI for Science. Genomic regulation, molecular conformation, multimodal RNA language models, structured machine learning, interpretable inference, and decision-making under uncertainty.",
+    "research_interests_zh": "科学智能（AI for Science）。基因组调控与分子构象建模，包括多模态 RNA 语言模型。结构化机器学习与可解释推断。不确定性下的预测与决策。"
   },
   "sections": [
     {
       "title": "Education",
+      "title_zh": "教育经历",
       "kind": "entries",
       "entry_spacing": 2,
       "items": [
         {
           "title": "Xinjiang University",
+          "title_zh": "新疆大学",
           "date": "2024-2028 (expected)",
+          "date_zh": "2024-2028（预计）",
           "details": [
             "Undergraduate in Intelligence Science and Technology, School of Future Technology.",
-            "Coursework: Advanced Mathematics, Linear Algebra, Probability and Statistics, Algorithms, Python, Machine Learning, Deep Learning, Natural Language Processing, Software Engineering, Microcontrollers and Interface Technology, and Image Signal Processing.",
+            "Coursework includes Advanced Mathematics, Linear Algebra, Probability and Mathematical Statistics, Data Structures and Algorithms, Advanced Programming (Python), Machine Learning, Deep Learning, Natural Language Processing, Software Engineering, Microcontrollers and Interface Technology, and Image Signal Processing.",
             "English: CET-4 453; English Test for International Communication (ETIC), CLA-Basic Pass."
+          ],
+          "details_zh": [
+            "未来技术学院智能科学与技术专业本科",
+            "主要课程包括高等数学、线性代数、概率论与数理统计、数据结构与算法、高级程序设计（Python）、机器学习、深度学习、自然语言处理、软件工程、单片机与接口技术和图像信号处理等。",
+            "英语能力：CET-4 453 分，国际人才英语考试（ETIC）CLA-Basic 通过。"
           ],
           "url": "https://www.xju.edu.cn/"
         },
         {
           "title": "Tsinghua Qian Xuesen Program & Shenzhen X-Institute",
+          "title_zh": "清华大学钱学森班与深圳零一学院",
           "date": "2024-2028 (expected)",
+          "date_zh": "2024-2028（预计）",
           "details": [
             "Zero One Scholar in the joint training program. The research training curriculum comprises ESRT, ORIC, and SURF."
+          ],
+          "details_zh": [
+            "联合培养零一学者。科研训练包括 ESRT、ORIC 和 SURF。"
           ],
           "url": "https://www.x-institute.edu.cn/accompany"
         },
         {
           "title": "AI for Drug Discovery Symposium: From Target to Deal",
+          "title_zh": "AI+新药研发研讨会：从靶点到交易",
           "date": "2026",
+          "date_zh": "2026",
           "details": [
             "Attendee · Guangming, Shenzhen."
+          ],
+          "details_zh": [
+            "参会，深圳光明。"
           ],
           "url": "https://mp.weixin.qq.com/s/8ByNQKUITxVejy5jDeEXwA"
         },
         {
           "title": "Fudan University · Summer School in Mathematical Logic",
+          "title_zh": "复旦大学 · 数理逻辑暑期学校",
           "date": "2025",
+          "date_zh": "2025",
           "details": [
             "Foundations and applications of recursion theory with Liang Yu, including computable forcing, higher recursion theory, and algorithmic information theory."
+          ],
+          "details_zh": [
+            "学习喻良老师的《递归论基础及其应用》，内容包括能行力迫法、高阶递归论和算法信息论。"
           ],
           "url": "https://logic.fudan.edu.cn/event2025/summer"
         }
@@ -53,27 +80,45 @@
     },
     {
       "title": "Research experience",
+      "title_zh": "科研经历",
       "kind": "entries",
       "items": [
         {
-          "title": "Institute of Software, Chinese Academy of Sciences",
-          "date": "2025-2026",
-          "details": [
-            "Individual undergraduate project supervised by Junjie Wang. Built MemoDroid, a lightweight plug-in with three-tier memory for LLM-based GUI testing, and evaluated it on at least 200 real applications across 15 categories."
-          ]
-        },
-        {
           "title": "Institute of High Energy Physics, Chinese Academy of Sciences",
+          "title_zh": "中国科学院高能物理研究所",
           "date": "2025-2026",
+          "date_zh": "2025-2026",
           "details": [
             "Individual undergraduate research project supervised by Haiyun Teng. Built a GPU streaming prototype and software framework for data acquisition, experiment-specific image analysis, output debugging, and monitoring on neutron spectrometers. The framework uses direct memory access and concurrent GPU image processing."
-          ]
+          ],
+          "details_zh": [
+            "滕海云副研究员指导的本科生独立项目。构建面向中子谱仪的 GPU 流式数据采集原型与软件框架，支持直接内存访问读出、并发图像处理、实验专用图像分析、输出调试和监控。"
+          ],
+          "url": "https://www.ihep.cas.cn/"
+        },
+        {
+          "title": "Institute of Software, Chinese Academy of Sciences",
+          "title_zh": "中国科学院软件研究所",
+          "date": "2025-2026",
+          "date_zh": "2025-2026",
+          "details": [
+            "Individual undergraduate project supervised by Junjie Wang. Built MemoDroid, a lightweight plug-in with three-tier memory for LLM-based GUI testing, and evaluated it on at least 200 real applications across 15 categories."
+          ],
+          "details_zh": [
+            "王俊杰研究员指导的本科生独立项目。开发 MemoDroid，为大语言模型驱动的 GUI 测试提供三层记忆轻量插件，并在覆盖 15 类的至少 200 个真实应用中评估。"
+          ],
+          "url": "https://www.iscas.ac.cn/"
         },
         {
           "title": "Shenzhen Bay Laboratory",
-          "date": "2026–Present",
+          "title_zh": "深圳湾实验室",
+          "date": "2026-Present",
+          "date_zh": "2026 年至今",
           "details": [
             "Visiting student in Prof. Yaoqi Zhou’s group, Institute of Systems and Physical Biology. Applied contrastive learning to RESM for downstream tasks and worked on extending it to multimodal inputs."
+          ],
+          "details_zh": [
+            "系统与物理生物学研究所周耀旗课题组访问学生。将对比学习应用于 RESM 的下游任务，并研究其多模态输入扩展。"
           ],
           "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
         }
@@ -81,66 +126,96 @@
     },
     {
       "title": "Research and engineering projects",
+      "title_zh": "科研与工程项目",
       "kind": "entries",
       "items": [
         {
           "title": "Plant counting and replanting decisions from drone imagery",
+          "title_zh": "无人机影像作物计数与补种决策",
           "date": "2025-2026",
           "details": [
             "Team lead, Undergraduate Innovation Training Program. Proposed a lightweight detector, aerial imaging, and GIS workflow to count plants and map missing seedlings for replanting."
+          ],
+          "details_zh": [
+            "大学生创新训练计划团队第一负责人。提出结合轻量目标检测、无人机影像和 GIS 的方案，统计植株数量并绘制缺苗位置，以辅助补种。"
           ]
         },
         {
           "title": "Open-source processor design · X-Fusion",
+          "title_zh": "开源处理器设计 · X-Fusion",
           "date": "2025",
           "details": [
             "Primary team lead. Recreated RISC-I and Cray-I architecture designs using open-source EDA tools and built a RISC-V vector arithmetic prototype. Received the X-Fusion Jingrui Award."
+          ],
+          "details_zh": [
+            "团队第一负责人。使用开源 EDA 工具复现 RISC-I 和 Cray-I 架构设计，实现 RISC-V 矢量算术原型，获 X-Fusion 零一菁锐奖。"
           ]
         }
       ]
     },
     {
       "title": "Outreach and service",
+      "title_zh": "公益与服务",
       "kind": "entries",
       "entry_spacing": 2,
       "items": [
         {
           "title": "2nd Change Maker Youth Initiative for Agricultural Heritage",
+          "title_zh": "第二届 Change Maker 农业文化遗产青年创变者行动",
           "date": "2026",
           "details": [
             "Team captain and project lead. Led fieldwork on wheat farming and processing in Shuanghe, Xinjiang."
+          ],
+          "details_zh": [
+            "队长兼第一负责人。带队在新疆双河市调研小麦种植与加工。"
           ],
           "url": "https://mp.weixin.qq.com/s/8WLNlBptw8gXcix8gY9xEw"
         },
         {
           "title": "3rd Movers4Climate Youth Green Action Initiative",
+          "title_zh": "第三届 Movers4Climate 绿色乡村青年行动",
           "date": "2026",
           "details": [
             "Team captain and project lead. Led five climate and sustainability lessons that reached 151 students."
+          ],
+          "details_zh": [
+            "队长兼第一负责人。带队开展五节气候行动与可持续发展课程，惠及 151 名学生。"
           ],
           "url": "https://mp.weixin.qq.com/s/HyoNtY_BdCeypwDFWIyGZA"
         },
         {
           "title": "Youth4Rural Digital Rural Development Initiative",
+          "title_zh": "Youth4Rural 数字乡村青年行动",
           "date": "2026",
           "details": [
             "Team captain and project lead. Led a 14-day teaching program. One group reached 32 students."
+          ],
+          "details_zh": [
+            "队长兼第一负责人。带队开展 14 天公益支教，其中一组课程覆盖 32 名学生。"
           ],
           "url": "https://mp.weixin.qq.com/s/J0qlshThxEmInMyb90Xrjg"
         },
         {
           "title": "IBM SkillsBuild Rural Education Program",
+          "title_zh": "IBM SkillsBuild 云支教数字未来乡村教育计划",
           "date": "2025",
           "details": [
             "Volunteer in a rural digital-skills education initiative. The team reached over 120 students."
+          ],
+          "details_zh": [
+            "参与乡村数字教育志愿项目，团队惠及 120 余名学生。"
           ],
           "url": "https://www.cup.edu.cn/oil/xyxw/b8fabc6cca7b4920a4f452b559a1d609.htm"
         },
         {
           "title": "Movers4Climate Youth Green Action Initiative",
+          "title_zh": "Movers4Climate 绿色乡村青年行动",
           "date": "2025",
           "details": [
             "National UN Community Volunteer, team captain and project lead. Led climate literacy and sustainability classes that reached over 180 rural students."
+          ],
+          "details_zh": [
+            "联合国社区志愿者、队长兼第一负责人。组织气候素养与可持续发展课程，覆盖 180 余名乡村学生。"
           ],
           "url": "https://unsdg.un.org/zh/latest/stories/%E7%BB%BF%E8%89%B2%E8%AF%BE%E5%A0%82-%E9%9D%A2%E5%90%91%E6%B0%94%E5%80%99%E5%8D%B1%E6%9C%BA%E4%BA%B2%E5%8E%86%E8%80%85%E7%9A%84%E6%95%99%E8%82%B2%E5%AE%9E%E8%B7%B5"
         }
@@ -148,14 +223,17 @@
     },
     {
       "title": "Publications and manuscripts",
+      "title_zh": "论文与稿件",
       "kind": "publications",
       "new_page": true,
       "entry_spacing": 1,
       "note": "† Equal contribution.",
+      "note_zh": "† 共同贡献。",
       "items": [
         {
           "title": "Discrete Backbone Elasticity and Curvature-Dependent Torsion Statistics in Proteins",
           "status": "2026 · arXiv · Preprint · Second author",
+          "status_zh": "2026 · arXiv 预印本 · 第二作者",
           "authors": [
             "Yiquan Wang",
             "Mingyu Bian",
@@ -165,7 +243,8 @@
         },
         {
           "title": "QDF-NIPT: A Bi-Level Optimization Framework for Precision Prediction and Decision-Making in Prenatal Fetal Concentration Analysis",
-          "status": "ICIC 2026 · CCF C · Online 2026, proceedings 2027 · Co-first author",
+          "status": "ICIC 2026 · Springer · CCF C · Online 2026, proceedings 2027 · Co-first author",
+          "status_zh": "ICIC 2026 · Springer · CCF C · 2026 在线出版，2027 论文集 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -175,7 +254,8 @@
         },
         {
           "title": "An Integrated Computational Framework for Optimal Timing Decision in Multi-Source Monitoring Scenarios",
-          "status": "2026 · ABCM · Accepted · EI conference · Co-first author",
+          "status": "ABCM 2026 · Published · EI conference · Co-first author",
+          "status_zh": "ABCM 2026 · 已发表 · EI 会议 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -184,7 +264,8 @@
         },
         {
           "title": "CoDA-Pipe: An Integrated Computational Pipeline for Classification and Interpretation of Compositional Data",
-          "status": "2026 · CITSC · Accepted · EI conference · Co-first author",
+          "status": "CITSC 2026 · Published · EI conference · Co-first author",
+          "status_zh": "CITSC 2026 · 已发表 · EI 会议 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -194,6 +275,7 @@
         {
           "title": "SVDKL: A dual-channel deep kernel framework unites structural-variation dosage and cis-regulatory topology for genomic prediction and network inference",
           "status": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · Under review · Co-first author",
+          "status_zh": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · 在审 · 共同第一作者",
           "authors": [
             "Mingyu Bian†",
             "Yiquan Wang†",
@@ -206,6 +288,7 @@
         {
           "title": "TRIDENT: a three-stage cascade for orthogonal feature deconfounding and dynamic ligand discovery",
           "status": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · Under review · Sole first author",
+          "status_zh": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · 在审 · 独立第一作者",
           "authors": [
             "Mingyu Bian",
             "Yiquan Wang",
@@ -214,110 +297,171 @@
         },
         {
           "title": "Structured Bilevel Covariance Learning for Shared-Design Multi-Output Regression: Convergence, Complexity, and Empirical Analysis",
-          "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author"
+          "status": "2026 · ICLR · Submitted · CCF A · Co-first author",
+          "status_zh": "2026 · ICLR · 在投 · CCF A · 共同第一作者",
+          "authors": [
+            "Wenzhe Chen",
+            "Mingyu Bian"
+          ]
         },
         {
           "title": "Marginal Fidelity Is Not Enough: A Controlled Study of Synthetic-to-Real Failure in cfDNA Screening",
-          "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author"
+          "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author",
+          "status_zh": "2026 · AAAI 2027 · 在投 · CCF A · 共同第一作者",
+          "authors": [
+            "Wenzhe Chen",
+            "Mingyu Bian"
+          ]
         }
       ]
     },
     {
       "title": "Competitions and honors",
+      "title_zh": "竞赛与荣誉",
       "kind": "awards",
       "entry_spacing": 0,
       "items": [
         {
           "result": "Provincial First Prize",
-          "title": "Xuechuang Cup National College Student Entrepreneurship Simulation Competition",
+          "result_zh": "省级一等奖",
+          "title": "13th Xuechuang Cup National College Student Entrepreneurship Simulation Competition",
+          "title_zh": "第十三届「学创杯」全国大学生创业综合模拟大赛",
           "date": "2026",
-          "role": "Xinjiang qualifier · Comprehensive Entrepreneurship Simulation, Undergraduate Division · Primary team lead"
+          "role": "Xinjiang qualifier · Comprehensive Entrepreneurship Simulation, Undergraduate Division · Primary team lead",
+          "role_zh": "新疆维吾尔自治区选拔赛 · 创业综合模拟赛项（本科组） · 团队第一负责人",
+          "url": "https://dean.xjtu.edu.cn/info/1172/10073.htm"
         },
         {
           "result": "National First Prize",
+          "result_zh": "全国一等奖",
           "title": "28th China Robot and Artificial Intelligence Competition",
+          "title_zh": "第二十八届中国机器人及人工智能大赛",
           "date": "2026",
-          "role": "Robotics Innovation Track · Core Team Member"
+          "role": "National Finals · Robot Innovation Track · Core Team Member",
+          "role_zh": "全国总决赛 · 机器人创新赛 · 核心成员",
+          "url": "https://www.caairobot.com/post/competition-rules-craic2026/"
         },
         {
           "result": "Provincial First Prize",
+          "result_zh": "省级一等奖",
           "title": "17th Lanqiao Cup National College Student Software and IT Competition",
+          "title_zh": "第十七届蓝桥杯全国大学生软件和信息技术大赛",
           "date": "2026",
-          "role": "Python Algorithm Design Track · Individual entrant"
+          "role": "Python Algorithm Design Track · Individual entrant",
+          "role_zh": "Python 算法设计赛道 · 个人参赛",
+          "url": "https://dasai.lanqiao.cn/notices/1829"
         },
         {
           "result": "Provincial Third Prize",
+          "result_zh": "省级三等奖",
           "title": "19th Chinese Collegiate Computing Competition (4C)",
+          "title_zh": "第十九届中国大学生计算机设计大赛",
           "date": "2026",
           "role": "Xinjiang Regional Round (Undergraduate Division) · Core Team Member · Jiangheng Guzhu",
+          "role_zh": "新疆区级赛（本科组） · 核心成员 · 作品《疆恒古筑》",
           "url": "https://jsjds.blcu.edu.cn/info/1042/2294.htm"
         },
         {
           "result": "Provincial Gold Award",
+          "result_zh": "省级金奖",
           "title": "China International College Students’ Innovation Competition",
+          "title_zh": "中国国际大学生创新大赛",
           "date": "2025 · 2026",
-          "role": "Core Team Member"
+          "role": "Core Team Member",
+          "role_zh": "核心成员",
+          "url": "https://cy.ncss.cn/"
         },
         {
           "result": "Provincial First Prize",
+          "result_zh": "省级一等奖",
           "title": "Contemporary Undergraduate Mathematical Contest in Modeling",
+          "title_zh": "高教社杯全国大学生数学建模竞赛",
           "date": "2025 · 2026",
-          "role": "Primary team lead"
+          "role": "Primary team lead",
+          "role_zh": "团队第一负责人",
+          "url": "https://www.mcm.edu.cn/html_cn/node/03c91a444e62eee81a3740fa97a461a6.html"
         },
         {
           "result": "National Second Prize",
+          "result_zh": "全国二等奖",
           "title": "7th Global Campus Artificial Intelligence Algorithm Elite Competition",
+          "title_zh": "第七届全球校园人工智能算法精英大赛",
           "date": "2025",
           "role": "AI + Integrated Circuits Track · Primary team lead",
+          "role_zh": "AI+集成电路主题赛 · 团队第一负责人",
           "url": "https://wljs.xju.edu.cn/info/1047/1634.htm"
         },
         {
           "result": "National First Prize",
+          "result_zh": "全国一等奖",
           "title": "13th National Collegiate Business Elite Challenge, Retail Operations Simulation",
+          "title_zh": "第十三届全国高校商业精英挑战赛创新创业竞赛",
           "date": "2025",
-          "role": "Primary team lead"
+          "role": "Primary team lead",
+          "role_zh": "流通业经营模拟赛道 · 团队第一负责人",
+          "url": "https://www.ccpitcsc.org/mcdt/4567"
         },
         {
           "result": "Jingrui Award",
+          "result_zh": "零一菁锐奖",
           "title": "X-Fusion Global Innovators’ Conference",
+          "title_zh": "X-Fusion 全球创新者聚变大会",
           "date": "2025",
-          "role": "Open-source computer team project · Primary team lead"
+          "role": "Open-source computer team project · Primary team lead",
+          "role_zh": "开源计算机团队项目 · 团队第一负责人",
+          "url": "https://www.x-institute.edu.cn/about/memorabilia"
         },
         {
           "result": "National First Prize",
+          "result_zh": "全国一等奖",
           "title": "National Collegiate Mathematics Olympiad",
+          "title_zh": "全国大学生奥林匹克数学竞赛",
           "date": "2025",
-          "role": "Non-Mathematics Division · Individual entrant"
+          "role": "Non-Mathematics Division · Individual entrant",
+          "role_zh": "非数学类专业组 · 个人参赛",
+          "url": "https://m.saikr.com/contest/notice_detail/30138"
         },
         {
           "result": "Successful Participant",
+          "result_zh": "成功参赛",
           "title": "Mathematical Contest in Modeling (MCM)",
+          "title_zh": "美国大学生数学建模竞赛（MCM）",
           "date": "2025",
-          "role": "Primary team lead"
+          "role": "Primary team lead",
+          "role_zh": "团队第一负责人",
+          "url": "https://www.contest.comap.com/undergraduate/contests/mcm/"
         },
         {
           "result": "National Second Prize",
+          "result_zh": "全国二等奖",
           "title": "7th Huajiao Cup National College Student Mathematics Competition",
+          "title_zh": "第七届华教杯全国大学生数学竞赛",
           "date": "2024",
-          "role": "Non-Mathematics Division · Individual entrant"
+          "role": "Non-Mathematics Division · Individual entrant",
+          "role_zh": "非数学类专业组 · 个人参赛",
+          "url": "https://www.cecmath.com/index/index/newinfo/id/360"
         }
       ]
     }
   ],
   "closing_note": {
     "label": "Campus activities",
-    "text": "Captain of the university table tennis and debate teams. Recognized as a debater at the provincial level."
+    "label_zh": "校园活动",
+    "text": "Captain of the university table tennis and debate teams. Recognized as a debater at the provincial level.",
+    "text_zh": "担任学校乒乓球队和辩论队队长，曾获省级佳辩选手。"
   },
   "wechat_accounts": [
     {
       "title": "BioticAI",
       "description": "AI and biology",
+      "description_zh": "人工智能与生物学",
       "qr_image": "assets/bioticai-qr.jpg"
     },
     {
       "title": "浮云半卷",
       "language": "zh",
       "description": "Poetry",
+      "description_zh": "原创诗词与写作随笔",
       "qr_image": "assets/poetry-qr.jpg"
     }
   ]
