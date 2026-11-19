@@ -40,14 +40,14 @@ CONTENT_WIDTH = PAGE_WIDTH - 2 * MARGIN
 STYLES = {
     "name": ParagraphStyle("name", fontName="CVBold", fontSize=38, leading=40, textColor=INK),
     "affiliation": ParagraphStyle("affiliation", fontName="CV", fontSize=11, leading=14, textColor=TEXT, spaceAfter=7),
-    "intro": ParagraphStyle("intro", fontName="CV", fontSize=10, leading=14, textColor=TEXT, spaceAfter=7),
+    "intro": ParagraphStyle("intro", fontName="CV", fontSize=11, leading=14, textColor=TEXT, spaceAfter=7),
     "section": ParagraphStyle("section", fontName="CVBold", fontSize=15, leading=17.5, textColor=GREEN),
-    "entry": ParagraphStyle("entry", fontName="CVBold", fontSize=10, leading=12.8, textColor=INK),
-    "date": ParagraphStyle("date", alignment=TA_RIGHT, fontName="CV", fontSize=8.3, leading=12, textColor=MUTED),
-    "detail": ParagraphStyle("detail", fontName="CV", fontSize=9.2, leading=11.8, textColor=TEXT),
-    "paper_title": ParagraphStyle("paper_title", fontName="CVBold", fontSize=9.8, leading=12.9, textColor=INK),
-    "paper_metadata": ParagraphStyle("paper_metadata", fontName="CV", fontSize=8.8, leading=12.2, textColor=MUTED),
-    "award": ParagraphStyle("award", fontName="CV", fontSize=8.65, leading=12.2, textColor=TEXT),
+    "entry": ParagraphStyle("entry", fontName="CVBold", fontSize=11, leading=12.8, textColor=INK),
+    "date": ParagraphStyle("date", alignment=TA_RIGHT, fontName="CV", fontSize=9.3, leading=12, textColor=MUTED),
+    "detail": ParagraphStyle("detail", fontName="CV", fontSize=10.2, leading=11.8, textColor=TEXT),
+    "paper_title": ParagraphStyle("paper_title", fontName="CVBold", fontSize=10.8, leading=12.9, textColor=INK),
+    "paper_metadata": ParagraphStyle("paper_metadata", fontName="CV", fontSize=9.8, leading=12.2, textColor=MUTED),
+    "award": ParagraphStyle("award", fontName="CV", fontSize=9.65, leading=12.2, textColor=TEXT),
 }
 CHINESE_STYLES = {
     name: ParagraphStyle(

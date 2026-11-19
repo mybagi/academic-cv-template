@@ -361,5 +361,26 @@
         }
       ]
     }
+  ],
+  "closing_note": {
+    "label": "About Shenzhen X-Institute",
+    "label_zh": "深圳零一学院简介",
+    "text": "Shenzhen X-Institute grew out of Tsinghua University’s Qian Xuesen Mechanics Class. Founded in 2009, the class was one of 66 talent-training pilots and focused on engineering fundamentals and interdisciplinary innovation.",
+    "text_zh": "深圳零一学院缘起于清华学堂人才培养计划的钱学森力学班。钱班创办于 2009 年，是当时 66 个基础学科拔尖人才培养试点之一，侧重工科基础和跨学科创新。"
+  },
+  "wechat_accounts": [
+    {
+      "title": "BioticAI",
+      "description": "AI and biology",
+      "description_zh": "人工智能与生物学",
+      "qr_image": "assets/bioticai-qr.jpg"
+    },
+    {
+      "title": "浮云半卷",
+      "language": "zh",
+      "description": "Original poetry and writing",
+      "description_zh": "原创诗词与写作随笔",
+      "qr_image": "assets/poetry-qr.jpg"
+    }
   ]
 }
