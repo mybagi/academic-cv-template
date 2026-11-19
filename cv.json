@@ -365,21 +365,21 @@
   "closing_note": {
     "label": "About Shenzhen X-Institute",
     "label_zh": "深圳零一学院简介",
-    "text": "Shenzhen X-Institute grew out of Tsinghua University’s Qian Xuesen Mechanics Class. Founded in 2009, the class was one of 66 talent-training pilots and focused on engineering fundamentals and interdisciplinary innovation.",
-    "text_zh": "深圳零一学院缘起于清华学堂人才培养计划的钱学森力学班。钱班创办于 2009 年，是当时 66 个基础学科拔尖人才培养试点之一，侧重工科基础和跨学科创新。"
+    "text": "Shenzhen X-Institute grew out of the Qian Xuesen Mechanics Class in Tsinghua University’s Xuetang Program. Founded in 2009, the class was the only one of 66 pilot programs in the Tsinghua Xuetang Program and the national program for top students in basic disciplines to focus on engineering fundamentals and interdisciplinary innovation across mechanics and engineering. Shenzhen X-Institute seeks to nurture innovators who use science and technology to benefit humanity, explore new ways of educating future innovators, and respond to the Qian Xuesen question of how to cultivate exceptional talent.",
+    "text_zh": "深圳零一学院源于清华大学学堂计划钱学森力学班（简称清华钱班）。清华钱班创办于 2009 年，是清华学堂人才培养计划暨国家基础学科拔尖学生培养试验计划 66 个试点项目中，唯一以工科基础和力学与工程技术跨学科创新为定位的试验班。学院致力于发掘和培养有志于通过科技改变世界、造福人类的创新人才，探索未来创新人才的培养模式，回答「钱学森之问」。"
   },
   "wechat_accounts": [
     {
       "title": "BioticAI",
-      "description": "AI and biology",
-      "description_zh": "人工智能与生物学",
+      "description": "Paper explainers, research updates, and notes on bioinformatics, artificial intelligence, and frontiers in interdisciplinary science. Scan the QR code to follow BioticAI and join the discussion.",
+      "description_zh": "分享论文解读、前沿快报和研究笔记，关注生物信息学、人工智能、前沿交叉科学。欢迎扫码关注，交流讨论。",
       "qr_image": "assets/bioticai-qr.jpg"
     },
     {
       "title": "浮云半卷",
       "language": "zh",
-      "description": "Original poetry and writing",
-      "description_zh": "原创诗词与写作随笔",
+      "description": "Here I write and read poetry. In my essays, I write about things it took time to understand and ordinary moments that made my heart skip a beat. Submissions are welcome. Leave a few lines of your own here.",
+      "description_zh": "写诗，也读诗。随笔里，有走过一段路才懂得的事，也有寻常一刻的怦然心动。欢迎投稿，也把你的文字留在这里。",
       "qr_image": "assets/poetry-qr.jpg"
     }
   ]
