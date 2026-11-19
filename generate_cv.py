@@ -39,6 +39,7 @@ CONTENT_WIDTH = PAGE_WIDTH - 2 * MARGIN
 
 STYLES = {
     "name": ParagraphStyle("name", fontName="CVBold", fontSize=38, leading=40, textColor=INK),
+    "affiliation": ParagraphStyle("affiliation", fontName="CV", fontSize=11, leading=14, textColor=TEXT, spaceAfter=7),
     "intro": ParagraphStyle("intro", fontName="CV", fontSize=10, leading=14, textColor=TEXT, spaceAfter=7),
     "section": ParagraphStyle("section", fontName="CVBold", fontSize=15, leading=17.5, textColor=GREEN),
     "entry": ParagraphStyle("entry", fontName="CVBold", fontSize=10, leading=12.8, textColor=INK),
@@ -121,19 +122,20 @@ def heading(label, before, after, styles, content=()):
     ])
 
 
-def dated_entry(item, space, styles):
+def entry(item, space, styles):
     title = paragraph(linked_label(item["title"], item.get("url")), "entry", styles)
-    date = paragraph(escape(item["date"]), "date", styles)
-    pair = Table([[title, date]], colWidths=[CONTENT_WIDTH - 134, 134])
-    pair.setStyle(TableStyle([
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("LEFTPADDING", (0, 0), (-1, -1), 0),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-        ("TOPPADDING", (0, 0), (-1, -1), 0),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-    ]))
+    if date := item.get("date"):
+        date_label = paragraph(escape(date), "date", styles)
+        title = Table([[title, date_label]], colWidths=[CONTENT_WIDTH - 134, 134])
+        title.setStyle(TableStyle([
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+            ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+        ]))
     detail = "<br/>".join(escape(line) for line in item["details"])
-    return KeepTogether([pair, paragraph(detail, "detail", styles), Spacer(1, space)])
+    return KeepTogether([title, paragraph(detail, "detail", styles), Spacer(1, space)])
 
 
 def publication(item, display_names, space, styles):
@@ -175,7 +177,9 @@ def biography_paragraph(item, styles):
         markup = escape(text)
     if title := item.get("heading"):
         markup = f"<b>{escape(title)}</b><br/>{markup}"
-    return paragraph(markup, "intro", styles)
+        return paragraph(markup, "intro", styles)
+    intro = styles["intro"]
+    return Paragraph(markup, ParagraphStyle("bio-prose", parent=intro, firstLineIndent=2 * intro.fontSize))
 
 
 def wechat_account_row(items, assets_dir, styles):
@@ -228,7 +232,7 @@ def build_story(data, assets_dir=ROOT, *, language="en"):
     story = [
         paragraph(name_markup, "name", styles),
         Spacer(1, 4),
-        paragraph(affiliation, "intro", styles),
+        paragraph(affiliation, "affiliation", styles),
     ]
     if biography := profile.get("biography"):
         first, *remaining = biography
@@ -248,7 +252,7 @@ def build_story(data, assets_dir=ROOT, *, language="en"):
         story.append(heading(section["title"], before, after, styles))
         if kind == "entries":
             space = section.get("entry_spacing", 2)
-            story.extend(dated_entry(item, space, styles) for item in section["items"])
+            story.extend(entry(item, space, styles) for item in section["items"])
         elif kind == "publications":
             space = section.get("entry_spacing", 6.7)
             story.extend(publication(item, display_names, space, styles) for item in section["items"])

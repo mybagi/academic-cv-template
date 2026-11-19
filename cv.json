@@ -138,8 +138,6 @@
         {
           "title": "Institute of High Energy Physics, Chinese Academy of Sciences",
           "title_zh": "中国科学院高能物理研究所",
-          "date": "2025-2026",
-          "date_zh": "2025-2026",
           "details": [
             "Built a neutron spectrometer acquisition prototype and software using DMA readout and concurrent GPU processing for image analysis and runtime monitoring."
           ],
@@ -151,8 +149,6 @@
         {
           "title": "Institute of Software, Chinese Academy of Sciences",
           "title_zh": "中国科学院软件研究所",
-          "date": "2025-2026",
-          "date_zh": "2025-2026",
           "details": [
             "Built MemoDroid, a three-tier memory plug-in for LLM-based GUI testing, and evaluated it on at least 200 real apps across 15 categories."
           ],
@@ -164,8 +160,6 @@
         {
           "title": "Shenzhen Bay Laboratory",
           "title_zh": "深圳湾实验室",
-          "date": "2026-Present",
-          "date_zh": "2026 年至今",
           "details": [
             "Applied contrastive learning to RESM's downstream tasks and investigated how to integrate multiple types of RNA data into the model."
           ],
@@ -184,7 +178,6 @@
         {
           "title": "Plant counting and replanting decisions from drone imagery",
           "title_zh": "无人机影像作物计数与补种决策",
-          "date": "2025-2026",
           "details": [
             "Team lead, Undergraduate Innovation Training Program. Proposed a lightweight detector, aerial imaging, and GIS workflow to count plants and map missing seedlings for replanting."
           ],
@@ -195,7 +188,6 @@
         {
           "title": "Open-source processor design",
           "title_zh": "开源处理器设计",
-          "date": "2025",
           "details": [
             "Primary team lead. Recreated RISC-I and Cray-I architecture designs using open-source EDA tools and built a RISC-V vector arithmetic prototype."
           ],
@@ -308,8 +300,8 @@
         {
           "result": "Provincial First Prize",
           "result_zh": "省级一等奖",
-          "title": "13th Xuechuang Cup National College Student Entrepreneurship Simulation Competition",
-          "title_zh": "第十三届「学创杯」全国大学生创业综合模拟大赛"
+          "title": "13th Xuechuang Cup National College Student Entrepreneurship Simulation Competition (Primary team lead)",
+          "title_zh": "第十三届「学创杯」全国大学生创业综合模拟大赛（团队第一负责人）"
         },
         {
           "result": "National First Prize",
@@ -338,26 +330,26 @@
         {
           "result": "Provincial First Prize",
           "result_zh": "省级一等奖",
-          "title": "Contemporary Undergraduate Mathematical Contest in Modeling",
-          "title_zh": "高教社杯全国大学生数学建模竞赛"
+          "title": "Contemporary Undergraduate Mathematical Contest in Modeling (Primary team lead)",
+          "title_zh": "高教社杯全国大学生数学建模竞赛（团队第一负责人）"
         },
         {
           "result": "National Second Prize",
           "result_zh": "全国二等奖",
-          "title": "7th Global Campus Artificial Intelligence Algorithm Elite Competition",
-          "title_zh": "第七届全球校园人工智能算法精英大赛"
+          "title": "7th Global Campus Artificial Intelligence Algorithm Elite Competition (Primary team lead)",
+          "title_zh": "第七届全球校园人工智能算法精英大赛（团队第一负责人）"
         },
         {
           "result": "National First Prize",
           "result_zh": "全国一等奖",
-          "title": "13th National Collegiate Business Elite Challenge Innovation and Entrepreneurship Competition",
-          "title_zh": "第十三届全国高校商业精英挑战赛创新创业竞赛"
+          "title": "13th National Collegiate Business Elite Challenge Innovation and Entrepreneurship Competition (Primary team lead)",
+          "title_zh": "第十三届全国高校商业精英挑战赛创新创业竞赛（团队第一负责人）"
         },
         {
           "result": "Jingrui Award",
           "result_zh": "零一菁锐奖",
-          "title": "X-Fusion Global Innovators’ Conference",
-          "title_zh": "X-Fusion 全球创新者聚变大会"
+          "title": "X-Fusion Global Innovators’ Conference (Primary team lead)",
+          "title_zh": "X-Fusion 全球创新者聚变大会（团队第一负责人）"
         },
         {
           "result": "National First Prize",
@@ -367,9 +359,8 @@
         },
         {
           "result": "Successful Participant",
-          "result_zh": "成功参赛",
-          "title": "Mathematical Contest in Modeling (MCM)",
-          "title_zh": "美国大学生数学建模竞赛（MCM）"
+          "title": "Mathematical Contest in Modeling (MCM) (Primary team lead)",
+          "title_zh": "美国大学生数学建模竞赛（MCM）（团队第一负责人）"
         },
         {
           "result": "National Second Prize",
