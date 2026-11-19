@@ -39,14 +39,14 @@ CONTENT_WIDTH = PAGE_WIDTH - 2 * MARGIN
 
 STYLES = {
     "name": ParagraphStyle("name", fontName="CVBold", fontSize=38, leading=40, textColor=INK),
-    "intro": ParagraphStyle("intro", fontName="CV", fontSize=11, leading=14, textColor=TEXT, spaceAfter=7),
+    "intro": ParagraphStyle("intro", fontName="CV", fontSize=10, leading=14, textColor=TEXT, spaceAfter=7),
     "section": ParagraphStyle("section", fontName="CVBold", fontSize=15, leading=17.5, textColor=GREEN),
-    "entry": ParagraphStyle("entry", fontName="CVBold", fontSize=11, leading=12.8, textColor=INK),
-    "date": ParagraphStyle("date", alignment=TA_RIGHT, fontName="CV", fontSize=9.3, leading=12, textColor=MUTED),
-    "detail": ParagraphStyle("detail", fontName="CV", fontSize=10.2, leading=11.8, textColor=TEXT),
-    "paper_title": ParagraphStyle("paper_title", fontName="CVBold", fontSize=10.8, leading=12.9, textColor=INK),
-    "paper_metadata": ParagraphStyle("paper_metadata", fontName="CV", fontSize=9.8, leading=12.2, textColor=MUTED),
-    "award": ParagraphStyle("award", fontName="CV", fontSize=9.65, leading=12.2, textColor=TEXT),
+    "entry": ParagraphStyle("entry", fontName="CVBold", fontSize=10, leading=12.8, textColor=INK),
+    "date": ParagraphStyle("date", alignment=TA_RIGHT, fontName="CV", fontSize=8.3, leading=12, textColor=MUTED),
+    "detail": ParagraphStyle("detail", fontName="CV", fontSize=9.2, leading=11.8, textColor=TEXT),
+    "paper_title": ParagraphStyle("paper_title", fontName="CVBold", fontSize=9.8, leading=12.9, textColor=INK),
+    "paper_metadata": ParagraphStyle("paper_metadata", fontName="CV", fontSize=8.8, leading=12.2, textColor=MUTED),
+    "award": ParagraphStyle("award", fontName="CV", fontSize=8.65, leading=12.2, textColor=TEXT),
 }
 CHINESE_STYLES = {
     name: ParagraphStyle(
@@ -61,12 +61,14 @@ LABELS = {
     "en": {
         "title": "Academic CV",
         "subject": "Academic curriculum vitae",
+        "about": "About Me",
         "research": "Research interests",
         "wechat": "WeChat official accounts",
     },
     "zh": {
         "title": "学术简历",
         "subject": "学术简历",
+        "about": "个人简介",
         "research": "研究方向",
         "wechat": "微信公众号",
     },
@@ -159,13 +161,21 @@ def publication(item, display_names, space, styles):
 
 
 def award(item, space, styles):
-    event = linked_label(item["title"], item.get("url"))
-    result, role, date = (escape(item[key]) for key in ("result", "role", "date"))
-    date = date.replace(" · ", " <b>·</b> ")
     return KeepTogether([
-        paragraph(f"<b>{result}</b> · {event}<br/>{role} · {date}", "award", styles),
+        paragraph(f'{escape(item["title"])} · <b>{escape(item["result"])}</b>', "award", styles),
         Spacer(1, space),
     ])
+
+
+def biography_paragraph(item, styles):
+    text = item["text"]
+    if isinstance(text, list):
+        markup = "".join(linked_label(part["label"], part.get("url")) for part in text)
+    else:
+        markup = escape(text)
+    if title := item.get("heading"):
+        markup = f"<b>{escape(title)}</b><br/>{markup}"
+    return paragraph(markup, "intro", styles)
 
 
 def wechat_account_row(items, assets_dir, styles):
@@ -219,10 +229,13 @@ def build_story(data, assets_dir=ROOT, *, language="en"):
         paragraph(name_markup, "name", styles),
         Spacer(1, 4),
         paragraph(affiliation, "intro", styles),
-        paragraph(
-            f'<b>{labels["research"]}</b> · {escape(profile["research_interests"])}', "intro", styles
-        ),
     ]
+    if biography := profile.get("biography"):
+        first, *remaining = biography
+        story.append(heading(labels["about"], 2, 5, styles, [biography_paragraph(first, styles)]))
+        story.extend(biography_paragraph(item, styles) for item in remaining)
+    elif interests := profile.get("research_interests"):
+        story.append(paragraph(f'<b>{labels["research"]}</b> · {escape(interests)}', "intro", styles))
     for section in data["sections"]:
         starts_page = section.get("new_page", False)
         if starts_page:

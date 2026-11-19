@@ -1,6 +1,6 @@
 # Academic CV template
 
-Two-page English and Simplified Chinese academic CVs generated from one editable JSON file. The example contains Mingyu Bian’s public academic CV, including linked institutions and papers, education, research experience, projects, community service, publications, awards, and WeChat official accounts.
+Two-page English and Simplified Chinese academic CVs generated from one editable JSON file. The example contains Mingyu Bian’s public academic CV, including a biography, education, research experience, projects, publications, and competition results.
 
 ## Build the PDFs
 
@@ -28,7 +28,9 @@ The first build downloads and verifies the fonts and caches them in `build/fonts
 
 ## Edit the content
 
-Update [cv.json](cv.json) and rebuild both PDFs. Fields such as `title_zh` and `status_zh` supply Chinese versions of `title` and `status`. Dates, author lists, paper titles, and URLs can be shared by both languages. The `sections` and each section’s `items` render in file order. Use the `entries` layout for dated entries, `publications` for research outputs, and `awards` for honors and competition roles. An entry can include a URL and one or more detail lines. Set `new_page` to start a section on the next page or `entry_spacing` to adjust the space after each item in points. The optional `alternate_name` adds a second name alongside the primary name.
+Update [cv.json](cv.json) and rebuild both PDFs. Fields such as `title_zh` and `status_zh` supply Chinese versions of `title` and `status`. Dates, author lists, paper titles, and URLs can be shared by both languages. The `sections` and each section’s `items` render in file order. Use the `entries` layout for dated entries, `publications` for research outputs, and `awards` for competition names and results. An entry can include a URL and one or more detail lines. Set `new_page` to start a section on the next page or `entry_spacing` to adjust the space after each item in points. The optional `alternate_name` adds a second name alongside the primary name.
+
+`profile.biography` contains paragraphs and optional headings. Use either a plain `text` string or a list of labeled text segments with optional URLs.
 
 The optional `wechat_accounts` list adds official account names, descriptions, and QR codes at the end. Set `qr_image` relative to the JSON file and specify `"language": "zh"` for a Chinese account name.
 
