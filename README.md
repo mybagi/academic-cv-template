@@ -1,10 +1,13 @@
 # Academic CV template
 
-Two-page English and Simplified Chinese academic CVs generated from one editable JSON file. The example contains Mingyu Bian’s public academic CV, including a biography, education, research experience, projects, publications, and competition results.
+Mingyu Bian’s official English and Simplified Chinese CVs use the detailed desktop layout. The PDFs in this repository are copies of the files served on the homepage.
 
-## Build the PDFs
+- English [homepage PDF](https://mybian.cn/mingyu-bian-cv.pdf) · [repository PDF](pdf/mingyu-bian-cv-en.pdf)
+- 简体中文 [主页 PDF](https://mybian.cn/mingyu-bian-cv-zh.pdf) · [仓库 PDF](pdf/mingyu-bian-cv-zh.pdf)
 
-Use Python 3.11. From the repository root, create a virtual environment and install the versions in [requirements.txt](requirements.txt).
+## Build the reusable template
+
+The optional JSON renderer produces a compact template for reuse. It uses Python 3.11 and the versions in [requirements.txt](requirements.txt).
 
 **Windows PowerShell**
 
@@ -36,9 +39,9 @@ The optional `wechat_accounts` list adds official account names, descriptions, a
 
 To use different content or an output path, run `python generate_cv.py --data path/to/cv.json --output path/to/cv.pdf` with the virtual environment’s Python. Use `--expected-pages` when you want the build to reject a layout that exceeds or falls short of a chosen page count.
 
-## Build on GitHub
+## GitHub downloads
 
-The [workflow](.github/workflows/build.yml) rebuilds both PDFs on pushes and pull requests to `main`, and supports manual runs. Open **Actions → Build academic CV → a successful run → Artifacts → academic-cv** to download both PDFs from that run. The build uses public dependencies and requires no repository secrets.
+The [workflow](.github/workflows/build.yml) packages the checked-in official PDFs on pushes and pull requests to `main` and supports manual runs. Open **Actions → Package official CV PDFs → a successful run → Artifacts → academic-cv** to download both PDFs from that run.
 
 ## Fonts
 

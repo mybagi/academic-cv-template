@@ -1,4 +1,4 @@
-name: Build academic CV
+name: Package official CV PDFs
 
 on:
   push:
@@ -17,21 +17,11 @@ jobs:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.11"
-          cache: pip
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Build English and Chinese PDFs
-        run: |
-          python generate_cv.py --language en --expected-pages 2 --output build/mingyu-bian-cv-en.pdf
-          python generate_cv.py --language zh --expected-pages 2 --output build/mingyu-bian-cv-zh.pdf
       - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
           name: academic-cv
           path: |
-            build/mingyu-bian-cv-en.pdf
-            build/mingyu-bian-cv-zh.pdf
+            pdf/mingyu-bian-cv-en.pdf
+            pdf/mingyu-bian-cv-zh.pdf
           if-no-files-found: error
