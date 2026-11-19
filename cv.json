@@ -139,10 +139,10 @@
           "title": "Institute of High Energy Physics, CAS (Associate Research Scientist Haiyun Teng)",
           "title_zh": "中国科学院高能物理研究所（滕海云副研究员指导）",
           "details": [
-            "Built a neutron spectrometer acquisition prototype and software using DMA readout and concurrent GPU processing for image analysis and runtime monitoring."
+            "Built a GPU streaming prototype for neutron imaging with DMA readout and monitoring."
           ],
           "details_zh": [
-            "搭建中子谱仪 GPU 流式采集样机和软件框架，通过 DMA 读出和 GPU 并发处理实现图像分析及运行监测。"
+            "搭建中子谱仪 GPU 流式采集样机，支持 DMA 读出、图像分析与运行监测。"
           ],
           "url": "https://www.ihep.cas.cn/"
         },
@@ -150,10 +150,10 @@
           "title": "Institute of Software, CAS (Research Scientist Junjie Wang)",
           "title_zh": "中国科学院软件研究所（王俊杰研究员指导）",
           "details": [
-            "Built MemoDroid, a three-tier memory plug-in for LLM-based GUI testing, and evaluated it on at least 200 real apps across 15 categories."
+            "Built MemoDroid for LLM-based GUI testing and evaluated it on 200+ apps in 15 categories."
           ],
           "details_zh": [
-            "开发面向大语言模型 GUI 测试的三层记忆插件 MemoDroid，并在覆盖 15 类的至少 200 个真实应用中完成评估。"
+            "开发 MemoDroid 三层记忆 GUI 测试插件，在 15 类、至少 200 个应用上评估。"
           ],
           "url": "https://www.iscas.ac.cn/"
         },
@@ -161,10 +161,10 @@
           "title": "Shenzhen Bay Laboratory",
           "title_zh": "深圳湾实验室",
           "details": [
-            "Applied contrastive learning to RESM's downstream tasks and investigated how to integrate multiple types of RNA data into the model."
+            "Applied contrastive learning to RESM and explored multimodal RNA inputs."
           ],
           "details_zh": [
-            "将对比学习应用于 RNA 语言模型 RESM 的下游任务，并研究如何在模型中整合多种 RNA 信息。"
+            "用对比学习优化 RESM 下游任务，并探索多模态 RNA 信息整合。"
           ],
           "url": "https://en.szbl.ac.cn/research/groups/Yaoqi-Zhou.htm"
         }
@@ -179,20 +179,20 @@
           "title": "Plant counting and replanting decisions from drone imagery",
           "title_zh": "无人机影像作物计数与补种决策",
           "details": [
-            "Team lead, Undergraduate Innovation Training Program. Proposed a lightweight detector, aerial imaging, and GIS workflow to count plants and map missing seedlings for replanting."
+            "Led design of a UAV and YOLOv8-tiny workflow for plant counts and OpenCV gap mapping."
           ],
           "details_zh": [
-            "大学生创新训练计划团队第一负责人。提出结合轻量目标检测、无人机影像和 GIS 的方案，统计植株数量并绘制缺苗位置，以辅助补种。"
+            "带队设计无人机植株计数和缺苗定位方案，使用 YOLOv8-tiny 和 OpenCV。"
           ]
         },
         {
           "title": "Open-source processor design",
           "title_zh": "开源处理器设计",
           "details": [
-            "Primary team lead. Recreated RISC-I and Cray-I architecture designs using open-source EDA tools and built a RISC-V vector arithmetic prototype."
+            "Led open-source recreations of RISC-I and Cray-I and prototyped a RISC-V vector unit."
           ],
           "details_zh": [
-            "团队第一负责人。使用开源 EDA 工具复现 RISC-I 和 Cray-I 架构设计，实现 RISC-V 矢量算术原型。"
+            "带队用开源 EDA 复刻 RISC-I 和 Cray-I，并实现 RISC-V 向量算术原型。"
           ]
         }
       ]
