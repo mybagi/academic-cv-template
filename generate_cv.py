@@ -212,8 +212,9 @@ def build_story(data, assets_dir=ROOT, *, language="en"):
     affiliation = escape(profile["affiliation"])
     if website := profile.get("website"):
         affiliation += " · " + linked_label(website["label"], website["url"])
-    if arxiv := profile.get("arxiv"):
-        affiliation += " · " + linked_label("arXiv", arxiv)
+    for field, label in (("arxiv", "arXiv"), ("linkedin", "LinkedIn")):
+        if url := profile.get(field):
+            affiliation += " · " + linked_label(label, url)
     story = [
         paragraph(name_markup, "name", styles),
         Spacer(1, 4),
