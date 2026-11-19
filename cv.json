@@ -136,8 +136,8 @@
       "kind": "entries",
       "items": [
         {
-          "title": "Institute of High Energy Physics, Chinese Academy of Sciences",
-          "title_zh": "中国科学院高能物理研究所",
+          "title": "Institute of High Energy Physics, CAS (Associate Research Scientist Haiyun Teng)",
+          "title_zh": "中国科学院高能物理研究所（滕海云副研究员指导）",
           "details": [
             "Built a neutron spectrometer acquisition prototype and software using DMA readout and concurrent GPU processing for image analysis and runtime monitoring."
           ],
@@ -147,8 +147,8 @@
           "url": "https://www.ihep.cas.cn/"
         },
         {
-          "title": "Institute of Software, Chinese Academy of Sciences",
-          "title_zh": "中国科学院软件研究所",
+          "title": "Institute of Software, CAS (Research Scientist Junjie Wang)",
+          "title_zh": "中国科学院软件研究所（王俊杰研究员指导）",
           "details": [
             "Built MemoDroid, a three-tier memory plug-in for LLM-based GUI testing, and evaluated it on at least 200 real apps across 15 categories."
           ],
@@ -204,12 +204,10 @@
       "new_page": true,
       "entry_spacing": 1,
       "note": "† Equal contribution.",
-      "note_zh": "† 共同贡献。",
       "items": [
         {
           "title": "Discrete Backbone Elasticity and Curvature-Dependent Torsion Statistics in Proteins",
           "status": "2026 · arXiv · Preprint · Second author",
-          "status_zh": "2026 · arXiv 预印本 · 第二作者",
           "authors": [
             "Yiquan Wang",
             "Mingyu Bian",
@@ -220,7 +218,6 @@
         {
           "title": "QDF-NIPT: A Bi-Level Optimization Framework for Precision Prediction and Decision-Making in Prenatal Fetal Concentration Analysis",
           "status": "ICIC 2026 · Springer · CCF C · Online 2026, proceedings 2027 · Co-first author",
-          "status_zh": "ICIC 2026 · Springer · CCF C · 2026 在线出版，2027 论文集 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -231,7 +228,6 @@
         {
           "title": "An Integrated Computational Framework for Optimal Timing Decision in Multi-Source Monitoring Scenarios",
           "status": "ABCM 2026 · Published · EI conference · Co-first author",
-          "status_zh": "ABCM 2026 · 已发表 · EI 会议 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -241,7 +237,6 @@
         {
           "title": "CoDA-Pipe: An Integrated Computational Pipeline for Classification and Interpretation of Compositional Data",
           "status": "CITSC 2026 · Published · EI conference · Co-first author",
-          "status_zh": "CITSC 2026 · 已发表 · EI 会议 · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian",
@@ -250,8 +245,7 @@
         },
         {
           "title": "SVDKL: A dual-channel deep kernel framework unites structural-variation dosage and cis-regulatory topology for genomic prediction and network inference",
-          "status": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · Under review · Co-first author",
-          "status_zh": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · 在审 · 共同第一作者",
+          "status": "2026 · Horticulture Research · JCR Q1 (2025) · CAS Tier 1 Top (2025) · IF 9.5 (2025) · Under review · Co-first author",
           "authors": [
             "Mingyu Bian†",
             "Yiquan Wang†",
@@ -263,8 +257,7 @@
         },
         {
           "title": "TRIDENT: a three-stage cascade for orthogonal feature deconfounding and dynamic ligand discovery",
-          "status": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · Under review · Sole first author",
-          "status_zh": "2026 · Horticulture Research · JCR Q1 · IF 9.5 (2025) · 在审 · 独立第一作者",
+          "status": "2026 · Horticulture Research · JCR Q1 (2025) · CAS Tier 1 Top (2025) · IF 9.5 (2025) · Under review · Sole first author",
           "authors": [
             "Mingyu Bian",
             "Yiquan Wang",
@@ -274,7 +267,6 @@
         {
           "title": "Structured Bilevel Covariance Learning for Shared-Design Multi-Output Regression: Convergence, Complexity, and Empirical Analysis",
           "status": "2026 · ICLR · Submitted · CCF A · Co-first author",
-          "status_zh": "2026 · ICLR · 在投 · CCF A · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian"
@@ -283,7 +275,6 @@
         {
           "title": "Marginal Fidelity Is Not Enough: A Controlled Study of Synthetic-to-Real Failure in cfDNA Screening",
           "status": "2026 · AAAI 2027 · Submitted · CCF A · Co-first author",
-          "status_zh": "2026 · AAAI 2027 · 在投 · CCF A · 共同第一作者",
           "authors": [
             "Wenzhe Chen",
             "Mingyu Bian"
