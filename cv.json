@@ -10,6 +10,7 @@
       "label": "mybian.cn",
       "url": "https://mybian.cn/"
     },
+    "arxiv": "https://arxiv.org/search/?query=Bian%2C+Mingyu&searchtype=author",
     "research_interests": "AI for Science. Genomic regulation, molecular conformation, multimodal RNA language models, structured machine learning, interpretable inference, and decision-making under uncertainty.",
     "research_interests_zh": "科学智能（AI for Science）。基因组调控与分子构象建模，包括多模态 RNA 语言模型。结构化机器学习与可解释推断。不确定性下的预测与决策。"
   },

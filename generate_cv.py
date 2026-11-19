@@ -212,6 +212,8 @@ def build_story(data, assets_dir=ROOT, *, language="en"):
     affiliation = escape(profile["affiliation"])
     if website := profile.get("website"):
         affiliation += " · " + linked_label(website["label"], website["url"])
+    if arxiv := profile.get("arxiv"):
+        affiliation += " · " + linked_label("arXiv", arxiv)
     story = [
         paragraph(name_markup, "name", styles),
         Spacer(1, 4),
