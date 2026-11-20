@@ -371,8 +371,8 @@
   "wechat_accounts": [
     {
       "title": "BioticAI",
-      "description": "Everything can be computed. We cover computational biology, artificial intelligence, and interdisciplinary frontiers through paper explainers, research updates, and research notes. Scan the QR code to follow BioticAI and join the discussion.",
-      "description_zh": "万物皆可计算，专注于计算生物学、人工智能、前沿交叉科学等领域，分享论文解读、前沿快报和研究笔记。欢迎扫码关注，交流讨论。",
+      "description": "In the AI era, everything can be computed. We share paper explainers, research updates, and notes on computational biology, AI, and interdisciplinary frontiers. Scan the QR code to follow BioticAI and join the discussion.",
+      "description_zh": "AI浪潮之下，万物皆可计算：专注于计算生物学、人工智能、前沿交叉科学等领域，分享论文解读、前沿快报和研究笔记。欢迎扫码关注，交流讨论。",
       "qr_image": "assets/bioticai-qr.jpg"
     },
     {
