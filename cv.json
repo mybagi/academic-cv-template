@@ -86,8 +86,8 @@
         "text_zh": "评估测量误差对检测时点的影响，并在真实队列中检验合成数据训练的筛查模型。"
       },
       {
-        "text": "His manuscripts are under review at journals including Horticulture Research. His conference papers have been published or submitted for review in the main tracks of ICIC, CITSC, ABCM, AAAI, and ICLR. He welcomes discussions on shared research interests.",
-        "text_zh": "研究成果发表/在审于 Horticulture Research 等期刊，在 ICIC、CITSC、ABCM、AAAI、ICLR 等计算机主会上发表/在审，欢迎就共同感兴趣的研究课题交流探讨。"
+        "text": "He has a paper under review at Horticulture Research and another submitted to iMetaOmics. His conference papers are published or submitted in the main tracks of ICIC, CITSC, ABCM, AAAI, and ICLR. He welcomes discussion on shared research interests.",
+        "text_zh": "一篇论文正在 Horticulture Research 接受评审，另一篇已投至 iMetaOmics。会议论文在 ICIC、CITSC、ABCM、AAAI、ICLR 等主会上发表或在审。欢迎就共同感兴趣的课题交流探讨。"
       }
     ]
   },
@@ -257,7 +257,7 @@
         },
         {
           "title": "TRIDENT: a three-stage cascade for orthogonal feature deconfounding and dynamic ligand discovery",
-          "status": "2026 · Horticulture Research · JCR Q1 (2025) · CAS Tier 1 Top (2025) · IF 9.5 (2025) · Under review · Sole first author",
+          "status": "2026 · iMetaOmics · Submitted · Sole first author",
           "authors": [
             "Mingyu Bian",
             "Yiquan Wang",
